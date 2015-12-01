@@ -1,0 +1,54 @@
+{
+    "sensors" : [
+        {
+            "sensorType": "pH",
+            "sensorBrand": "atlas-scientific",
+            "sensorDescription": "The pH circuit has single point, dual point, and three point calibration. One requirement is that PH_MID_CALIBRATION_POINT must be calibrated first with a value 7.xx (in most cases it is 7.00). Standard temperature for a pH 7.00 is 25 degree Celsius (77 degree Fahrenheit). The only time that the PH_MID_CALIBRATION_POINT is not 7.xx is when the water is continuously very cold at below 10 degree Celsius (50 degree Fahrenheit) or very hot at over 45 degree Celsius (113 degree Fahrenheit). Two point calibration will provide high accuracy between midpoint and lowpoint (pH value of 1.00 - 6.00). Three point calibration will provide high accuracy over the full pH range. Only midpoint calibration 7.xx is mandatory. The other calibration points can be any value, the further apart the values, the greater the accuracy.",
+            "sensorCalParam": {
+                    "PH_CALIBRATION_CLEAR": "N Clear calibration to Factory",
+                    "PH_CALIBRATION_QUERY": "N Request status of calibration",
+                    "PH_LOW_CALIBRATION_POINT" : "D 1.00 6.00 Calibrate single point. Enter value between 1.00 and 6.00",
+                    "PH_MID_CALIBRATION_POINT" : "D 7.00 7.99 Calibrate dual point. Enter value between 7.00 and 7.99",
+                    "PH_HIGH_CALIBRATION_POINT" : "D 9.00 14.00 Calibrate triple point. Enter value between 9.00 and 14.00",
+                    "PH_TEMPERATURE_COMPENSATION": "D -10.00 55.00 Calibrate temperature. Enter Celsius degree value between -10.00 and 55.00"
+            }
+        },
+        {
+            "sensorType": "Conductivity",
+            "sensorBrand": "atlas-scientific",
+            "sensorDescription": "The Conductivity circuit permits one or two calibration point. Dry Calibration must always be done first (make sure the probe is dry). The value that the circuit take is expressed in microsiemens. The default probe that will be used is model K 1.0 which accepts microsiemens value from 5 to 200000. If the intended use is in a solution that will remain relatively constant, a single point calibration can be used. Single point calibration accurate range starts at 1% of the calibrated value to 400% above calibrated value. E.g. if single point calibrate value is 1440 microsiemens, the min will be 14.4 microsiemens and max be 5760 microsiemens. And a two point calibration can be used to monitor the conductivity of water over a wide range. It consists of a low point calibration and a high point calibration. The low point calibration should be 10-15% above the lowest point that will be read, and the high point calibration should be 15-20% below the highest point. E.g. to get a reading between 5 microsiemens to 100000 siemens, the low calibrate can be adjust to 12880 microsiemens and high calibrate to 80000 microsiemens.",
+            "sensorCalParam": {
+                    "CONDUCTIVITY_CALIBRATION_CLEAR": "N Clear calibration to Factory",
+                    "CONDUCTIVITY_CALIBRATION_QUERY": "N Request status of calibration",
+                    "CONDUCTIVITY_DRY_CALIBRATION": "N Calibrate when probe is dry. MUST BE DONE FIRST!",
+                    "CONDUCTIVITY_SINGLE_CALIBRATION_POINT": "I 5 50000 Calibrate single point. Enter value between 5 and 50000",
+                    "CONDUCTIVITY_LOW_DUAL_CALIBRATION_POINT": "I 5 200000 Calibrate low dual point. Enter value between 5 and 200000",
+	            "CONDUCTIVITY_HIGH_DUAL_CALIBRATION_POINT": "I 5 200000 Calibrate high dual point. Enter value between 5 and 200000",
+                    "CONDUCTIVITY_TEMPERATURE_COMPENSATION": "D -10.00 55.00 Calibrate temperature. Enter Celsius degree value between -10.00 and 55.00"
+            }
+
+        },
+        {
+            "sensorType": "Dissolved Oxygen",
+            "sensorBrand": "atlas-scientific",
+            "sensorDescription": "The DO circuit has a single point and dual point calibration. The standard temperature of the circuit is 20 degree Celsius (68 degree Fahrenheit). If the temperature is over by a at least 2 degrees, consider sending to the circuit the temperature to compensate. It is mandatory that the circuit be calibrated to the atmospheric oxygen concentration at the altitude where it will be used. You DO NOT want to calibrate the circuit at sea level, but deploy it on a mount top. Sending air temperature to the circuit will give higher accuracy readings. The second point calibration can be calibrated when there is no oxygen. This can be determined by reading the voltage of the probe using a multimeter or ADC. If the voltage is 0mV then it means no oxygen, and if it is in between 36mV to 54 mV it means 100% oxygen. The second point calibration is not neccary but it will give a higher resolution from 1.0 mg/L to 0.1 mg/L.",
+            "sensorCalParam": {
+                    "DO_CALIBRATION_CLEAR": "N Clear calibration to Factory",
+                    "DO_CALIBRATION_QUERY": "N Request status of calibration",
+                    "DO_ATMOSPHERIC_CALIBRATION": "N Calibrate to atmospheric oxygen level",
+                    "DO_ZERO_LEVEL_CALIBRATION": "N Calibrate to 0 dissolved oxygen level",
+                    "DO_TEMPERATURE_COMPENSATION": "D -10.00 55.00 Calibrate temperature. Enter Celsius degree value between -10.00 and 55.00"
+            }
+        },
+        {
+            "sensorType": "Oxygen Reduction Potential",
+            "sensorBrand": "atlas-scientific",
+            "sensorDescription": "The ORP circuit can be calibrated using a single point. The circuit has a flexible calibration protocol and allows single point calibration to any off the shelf calibration solution. Typically, calibration is done once per year unless the reading is continuously on the extreme of the scale (-900 or +900). ",
+            "sensorCalParam": {
+                    "ORP_CALIBRATION_CLEAR": "N Clear calibration to Factory",
+                    "ORP_CALIBRATION_QUERY": "N Request status of calibration",
+                    "ORP_SINGLE_CALIBRATION_POINT": "I -900 900 Calibrate single point. Enter value between -900 and 900"
+            }
+        }
+    ]
+}

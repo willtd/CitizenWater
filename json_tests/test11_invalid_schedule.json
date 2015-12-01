@@ -1,0 +1,13 @@
+{
+   "schedule": [{
+		"day":	"Not a real day",
+		"start_time":	"0:00",
+		"finish_time":	"23:59",
+		"interval":	"2"
+	}, {
+		"day":	"SUNDAY",
+		"start_time":	"0:00",
+		"finish_time":	"23:59",
+		"interval":	"3"
+	}]
+}

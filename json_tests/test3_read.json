@@ -1,0 +1,13 @@
+{
+   "sensors": [
+     {
+     "sensorType": "pH",
+     "sensorBrand": "atlas-scientific",
+     "actions": {
+         "take_reading": null
+     }
+     }
+   ]
+}
+
+

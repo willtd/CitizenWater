@@ -1,0 +1,21 @@
+{
+   "sensors": [
+     {
+     "sensorType": "pH",
+     "sensorBrand": "not a real brand",
+     "actions": {
+         "take_reading": null
+     }
+     },
+     {
+     "sensorType": "not a real sensor",
+     "sensorBrand": "atlas-scientific",
+     "actions": {
+         "take_reading": null
+     }
+     }
+
+   ]
+}
+
+

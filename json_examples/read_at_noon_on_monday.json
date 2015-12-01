@@ -1,0 +1,8 @@
+{
+   "schedule": [{
+		"day":	"MONDAY",
+		"start_time":	"0:00",
+		"finish_time":	"23:59",
+		"interval":	"59"
+	} ]
+}

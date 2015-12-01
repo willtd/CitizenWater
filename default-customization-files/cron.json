@@ -1,0 +1,37 @@
+[{
+		"day":	"Monday",
+		"start_time":	"0:00",
+		"finish_time":	"23:59",
+		"interval":	"30"
+	}, {
+		"day":	"Tuesday",
+		"start_time":	"0:00",
+		"finish_time":	"23:59",
+		"interval":	"30"
+	}, {
+		"day":	"Wednesday",
+		"start_time":	"0:00",
+		"finish_time":	"23:59",
+		"interval":	"30"
+	}, {
+		"day":	"Thursday",
+		"start_time":	"0:00",
+		"finish_time":	"23:59",
+		"interval":	"30"
+	}, {
+		"day":	"Friday",
+		"start_time":	"0:00",
+		"finish_time":	"23:59",
+		"interval":	"30"
+	}, {
+		"day":	"Saturday",
+		"start_time":	"0:00",
+		"finish_time":	"23:59",
+		"interval":	"30"
+	}, {
+		"day":	"Sunday",
+		"start_time":	"0:00",
+		"finish_time":	"23:59",
+		"interval":	"30"
+	}
+	]

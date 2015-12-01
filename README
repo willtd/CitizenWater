@@ -1,0 +1,22 @@
+######################
+# CitizenWater
+# 
+# Authors:
+# 
+# Date: July 19, 2015
+# 
+# This folder contains the repository of the CitizenWater project,
+# a project for ASU's CSE Capstone class in the Spring and Fall 2015 semesters.
+######################
+
+##############################################################################
+
+# To install the project, please follow all steps in setup_instructions.txt
+
+# The sensors supported are from the ENV-SDS Full Water Monitoring Kit. This kit
+# comes with dissolved oxygen, oxygen reduction potential, pH, and conductivity 
+# probes. For futher information, please see the following link: 
+# http://www.atlas-scientific.com/product_pages/kits/env-sds-kit.html
+
+
+

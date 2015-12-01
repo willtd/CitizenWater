@@ -1,0 +1,72 @@
+
+1. *Increasing size of /dev/root      // This step works for Windows
+source: https://communities.intel.com/thread/61483
+
+*THIS MAY DELETE EVERYTHING CURRENTLY ON THE EDISON!
+
+Connect Edison to your computer using both usb wires
+
+Download: 'Yocto complete image' and 'dfu-util':
+  - Download "http://downloadmirror.intel.com/25028/eng/edison-image-ww25.5-15.zip"
+    - All instructions here are tested with the image contained in the above link. You may encounter some difficulties if you do not use this image.
+    - If this link is not available, you may have to download 'Yocto complete image' from "https://software.intel.com/en-us/iot/hardware/edison/downloads". This may provide you with a different Edison image than the one these instructions were written for.
+  - Download 'dfu-util' from https://dl.dropboxusercontent.com/u/54378433/dfu-util/dfu-util.exe
+  - Extract the contents into a folder.
+  - Copy the dfu-util.exe into the same folder you extracted the Yocto image.
+  - Open command prompt and go to the directory of the Yocto image and type flashall.bat
+ 
+The message should be "Please plug and reboot the board". Reboot the board and it should start flashing.
+
+=== For the following steps, login to the Edison as 'root' over SSH (root has no password by default) ===
+
+2. Setup wifi   // Internet access required so we can update system programs and pull from repository 
+
+configure_edison --wifi
+
+3. Choose a name // Name will be used to identify your device
+
+configure_edison --name
+
+4. Configuring repository:
+
+source: http://alextgalileo.altervista.org/edison-package-repo-configuration-instructions.html
+
+To configure your Edison to fetch packages from your repo, replace anything you have in /etc/opkg/base-feeds.conf with the following (other opkg config files don't need any changes):
+ 	===/etc/opkg/base-feeds.conf contents below===
+	src/gz all http://repo.opkg.net/edison/repo/all
+	src/gz edison http://repo.opkg.net/edison/repo/edison
+	src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
+	===end of /etc/opkg/base-feeds.conf contents===
+
+5. Run the command 'opkg update'
+
+6. Run 'opkg install git'
+
+7. Run 'opkg install sudo'
+
+8. Run 'adduser citizenwater'
+
+8b. Run 'passwd citizenwater' (if not previously prompted to give a password)
+
+9. Run 'visudo -f /etc/sudoers' and modify it to give 'citizenwater' root privileges
+	- Find the part of the file that is labeled "User priviledge specification". 
+	- In a blank line below root, add the new user's name and copy the same privileges that root has. See example below:
+	
+		# User privilege specification
+		root        ALL=(ALL:ALL) ALL
+		citizenwater    ALL=(ALL:ALL) ALL
+
+10. Run 'exit' and then login as citizenwater
+
+=== For the following steps, you should be logged in as 'citizenwater' over SSH ===
+
+11. Run 'git init'
+
+12. Run 'git clone http://github.com/willtd/asu_capstone.git'
+
+13. Run 'cd asu_capstone' and './install.sh'
+    // Give relevant passwords when prompted    
+
+14. Reboot the Edison. You can use the command "sudo /sbin/shutdown -r now" to do so.
+    (To gracefully shutdown the Edison w/o restarting, use the command sudo /sbin/shutdown now")
+

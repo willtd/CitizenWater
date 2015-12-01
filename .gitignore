@@ -1,0 +1,5 @@
+*~
+*.o
+controller/citwater-controller
+controller/citwater-client
+sensor-daemon/sensor-daemon

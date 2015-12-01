@@ -1,0 +1,57 @@
+
+{
+    "set": 
+    {
+	"wifi-interval" : "10",
+	"take-reading"  : true,
+    "schedule": [ "MON 2:14-4:45  EVERY 30 MIN",
+                  "TUE 2:45-13:12 EVERY 15 MIN",
+                  "WED 1:11-14:14 EVERY 20 MIN",
+                  "FRI 1:00-12:12 EVERY 18 MIN",
+                  "FRI 0:00-23:59 EVERY 5 MIN",
+                  "SAT 0:00-23:59 EVERY 5 MIN"
+                ] 
+     },
+     
+    "get": 
+    {
+        
+	"status" : null,
+	"reading" : null,
+	"query" : "SQL Query Here"
+     },
+     
+     "status": {
+	"conductivity" : "running",
+	"turbidity"    : "running",
+	"wifi"         : "disabled"
+     },
+     
+     "sensor-data": {
+         "4/15/15 9:22:14 P.M." : {
+	    "conductivity" : "15 mS",
+	    "temperature"  : "12 C"
+	 }
+
+     },
+
+    "set_sensor_data": null,
+    "get_sensor_data": null,
+
+    "schedule" :  [ 
+        {
+            "day": "MONDAY",
+            "start_time":  "4:00",
+            "finish_time": "5:00",
+            "interval"   : "5"
+        },
+        {
+            "day": "TUESDAY",
+            "start_time":  "0:00",
+            "finish_time": "23:59",
+            "interval"   : "4"            
+        }
+    ],
+
+    "get_schedule" : null
+ }

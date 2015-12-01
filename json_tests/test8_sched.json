@@ -1,0 +1,34 @@
+{
+    "schedule" :  [
+        {
+            "day": "MONDAY",
+            "start_time":  "4:00",
+            "finish_time": "5:00",
+            "interval"   : "5"
+        },
+        {
+            "day": "TUESDAY",
+            "start_time":  "0:00",
+            "finish_time": "23:59",
+            "interval"   : "4"            
+        },
+        {
+            "day": "THURSDAY",
+            "start_time":  "7:00",
+            "finish_time": "7:12",
+            "interval"   : "4"            
+        },
+        {
+            "day": "THURSDAY",
+            "start_time":  "8:00",
+            "finish_time": "11:00",
+            "interval"   : "6"           
+        },
+        {
+            "day": "FRIDAY",
+            "start_time":  "11:00",
+            "finish_time": "13:50",
+            "interval"   : "1"           
+        }
+    ]
+ }

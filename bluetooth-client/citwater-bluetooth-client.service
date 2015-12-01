@@ -1,0 +1,12 @@
+[Unit]
+Description=Citizenwater Bluetooth Client service
+Requires=bluetooth.target
+After=bluetooth.target
+
+[Service]
+Type=idle
+RemainAfterExit=true
+ExecStart=/opt/citwater/citwater-bluetooth-client-startup.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+{
+   "sensors": [
+     {
+     "sensorType": "pH",
+     "sensorBrand": "atlas-scientific",
+     "actions": {
+         "calibrate": {
+            "PH_MID_CALIBRATION_POINT" : 7.00
+         }
+     }
+     }
+   ]
+}
+
+

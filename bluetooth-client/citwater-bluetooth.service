@@ -1,0 +1,12 @@
+[Unit]
+Description=Citizenwater Bluetooth service
+Requires=bluetooth.target
+After=bluetooth.target
+
+[Service]
+Type=idle
+RemainAfterExit=true
+ExecStart=/opt/citwater/citwater-bluetooth-startup.sh
+
+[Install]
+WantedBy=multi-user.target
